@@ -1,0 +1,226 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #1976d2;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin: 2rem 0;
+}
+
+label {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.25rem;
+}
+
+input[type="file"],
+input[type="text"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #1976d2;
+}
+
+button {
+    background-color: #1976d2;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #1565c0;
+}
+
+#status {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    margin: 8px 0;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 20px;
+    background-color: #1976d2;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+:root {
+    --background: #f5f5f5;
+    --container-bg: white;
+    --text: #333;
+    --text-secondary: #666;
+    --primary: #1976d2;
+    --primary-hover: #1565c0;
+    --border: #e0e0e0;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+    --background: #1a1a1a;
+    --container-bg: #2d2d2d;
+    --text: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --primary: #90caf9;
+    --primary-hover: #64b5f6;
+    --border: #404040;
+    --shadow: rgba(0, 0, 0, 0.3);
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+.container {
+    background: var(--container-bg);
+    box-shadow: 0 2px 4px var(--shadow);
+}
+
+h1 {
+    color: var(--primary);
+}
+
+label {
+    color: var(--text-secondary);
+}
+
+input[type="file"],
+input[type="text"] {
+    background-color: var(--container-bg);
+    color: var(--text);
+    border-color: var(--border);
+}
+
+input[type="text"]:focus {
+    border-color: var(--primary);
+}
+
+button {
+    background-color: var(--primary);
+    color: var(--container-bg);
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+}
+
+#status {
+    background-color: var(--background);
+}
+
+.container h1 {
+    margin-bottom: 0;  /* Remove bottom margin since it's handled by header */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+#theme-toggle {
+    padding: 0.5rem 1rem;  /* Slightly smaller padding for the toggle */
+    font-size: 0.9rem;     /* Slightly smaller font */
+}
+
+/* Style the file input wrapper */
+input[type="file"] {
+    position: relative;
+    width: 100%;
+    padding: .75rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 1rem;
+    color: var(--text);
+    background-color: var(--container-bg);
+    cursor: pointer;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+/* Style file input hover state */
+input[type="file"]:hover {
+    border-color: var(--primary);
+    background-color: var(--background);
+}
+
+/* Style file input focus state */
+input[type="file"]:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+/* Remove the default file input appearance */
+input[type="file"]::-webkit-file-upload-button {
+    visibility: hidden;
+    width: 0;
+}
+
+/* Create custom button appearance */
+input[type="file"]::before {
+    content: 'Choose File';
+    display: inline-block;
+    background: var(--primary);
+    color: var(--container-bg);
+    padding: 0.3rem .75rem;
+    border-radius: 4px;
+    margin-right: 0.75rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* Style the hover state of custom button */
+input[type="file"]:hover::before {
+    background-color: var(--primary-hover);
+}

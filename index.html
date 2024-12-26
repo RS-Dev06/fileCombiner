@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>File Combiner</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>File Combiner</h1>
+      <button id="theme-toggle" type="button">Toggle Dark Mode</button>
+  </div>
+    <p>Select two files to merge them into one:</p>
+
+    <form id="file-form">
+      <label for="file1">File 1:</label>
+      <input type="file" id="file1" required />
+
+      <label for="file2">File 2:</label>
+      <input type="file" id="file2" required />
+
+      <label for="outputFileName">Output File Name:</label>
+      <input type="text" id="outputFileName" placeholder="combined.txt" required />
+
+      <button type="submit">Combine Files</button>
+    </form>
+
+    <p id="status"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
